@@ -16,55 +16,55 @@ class MusicPlayer implements Player{
 
 
     public void start(){
-        if (!onOff && musicList.length > 0){
-            onOff = true;
-            currentIndex = 0;
-            currentSong = musicList[currentIndex];
+        if (!this.onOff && this.musicList.length > 0){
+            this.onOff = true;
+            this.currentIndex = 0;
+            this.currentSong = musicList[this.currentIndex];
         }
     }
 
 
     public void stop(){
-        if (onOff) {
-            onOff = false;
-            currentSong = "";
+        if (this.onOff) {
+            this.onOff = false;
+            this.currentSong = "";
         }
     }
 
     public boolean getOnOff(){
-        return onOff;
+        return this.onOff;
     }
 
 
     public void volumeUp(){
-        volume++;
+        this.volume++;
     }
 
 
     public void volumeDown(){
-        volume--;
+        this.volume--;
     }
 
 
     public int getVolume(){
-        return volume;
+        return this.volume;
     }
 
     public void next(){
-        if (currentIndex < musicList.length - 1){
-            currentIndex++;
-            currentSong = musicList[currentIndex];
+        if (this.currentIndex < this.musicList.length - 1){
+            this.currentIndex++;
+            this.currentSong = musicList[this.currentIndex];
         }
     }
 
     public void previous(){
-        if (currentIndex > 0){
-            currentIndex--;
-            currentSong = musicList[currentIndex];
+        if (this.currentIndex > 0){
+            this.currentIndex--;
+            this.currentSong = musicList[currentIndex];
         }
     }
 
     public String getCurrentSong(){
-        return currentSong;
+        return this.currentSong;
     }
 }

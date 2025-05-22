@@ -25,42 +25,42 @@ class VideoPlayer implements Player{
     }
 
     public boolean getOnOff(){
-        return onOff;
+        return this.onOff;
     }
 
     public void volumeUp(){
-        volume += 5;
+        this.volume += 5;
     }
 
     public void volumeDown(){
-        volume -= 5;
+        this.volume -= 5;
     }
 
     public int getVolume(){
-        return volume;
+        return this.volume;
     }
 
     public void fastForward(){
-        currentTime += 5;
+        this.currentTime += 5;
     }
 
     public void rewind(){
-        currentTime -= 5;
-        if (currentTime < 0){
-            currentTime = 0;
+        this.currentTime -= 5;
+        if (this.currentTime < 0){
+            this.currentTime = 0;
         }
     }
 
     public int getCurrentTime(){
-        return currentTime;
+        return this.currentTime;
     }
 
     public String getVideo(){
-        return video;
+        return this.video;
     }
 
     public void setVideo(String video){
         this.video = video;
-        currentTime = 0;
+        this.currentTime = 0;
     }
 }

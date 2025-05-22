@@ -15,51 +15,51 @@ class RadioPlayer implements Player{
     }
 
     public void start(){
-        if (!onOff && stationList.length > 0){
-            onOff = true;
-            currentIndex = 0;
-            station = stationList[currentIndex];
+        if (!this.onOff && this.stationList.length > 0){
+            this.onOff = true;
+            this.currentIndex = 0;
+            this.station = stationList[currentIndex];
         }
     }
 
     public void stop(){
-        if (onOff) {
-            onOff = false;
-            station = 0;
+        if (this.onOff) {
+            this.onOff = false;
+            this.station = 0;
         }
     }
 
     public boolean getOnOff(){
-        return onOff;
+        return this.onOff;
     }
 
     public void volumeUp(){
-        volume += 2;
+        this.volume += 2;
     }
 
     public void volumeDown(){
-        volume -= 2;
+        this.volume -= 2;
     }
 
     public int getVolume(){
-        return volume;
+        return this.volume;
     }
 
     public void next(){
-        if (currentIndex < stationList.length - 1){
-            currentIndex++;
-            station = stationList[currentIndex];
+        if (this.currentIndex < this.stationList.length - 1){
+            this.currentIndex++;
+            station = stationList[this.currentIndex];
         }
     }
 
     public void previous(){
-        if (currentIndex > 0){
-            currentIndex--;
-            station = stationList[currentIndex];
+        if (this.currentIndex > 0){
+            this.currentIndex--;
+            station = stationList[this.currentIndex];
         }
     }
 
     public double getStation(){
-        return station;
+        return this.station;
     }
 }
